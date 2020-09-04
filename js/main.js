@@ -2,7 +2,7 @@
 
 $(window).on('load', function() {
     /*------------------
-    	Preloder
+        Preloder
     --------------------*/
     $(".loader").fadeOut();
     $("#preloder").delay(400).fadeOut("slow");
@@ -11,7 +11,7 @@ $(window).on('load', function() {
 
 (function($) {
     /*------------------
-    	Navigation
+        Navigation
     --------------------*/
     $('.site-nav-menu > ul').slicknav({
         appendTo: '.header-section',
@@ -20,25 +20,25 @@ $(window).on('load', function() {
         allowParentLinks: true
     });
 
-    // $('.slicknav_nav').append('<li class="search-switch-warp"><button class="search-switch"><i class="fa fa-search"></i></button></li>');
-
-
-    // /*------------------
-    // 	Search model
-    // --------------------*/
-    // $('.search-switch').on('click', function() {
-    //     $('.search-model').fadeIn(400);
-    // });
-
-    // $('.search-close-switch').on('click', function() {
-    //     $('.search-model').fadeOut(400, function() {
-    //         $('#search-input').val('');
-    //     });
-    // });
+    $('.slicknav_nav').append('<li class="search-switch-warp"><button class="search-switch"><i class="fa fa-search"></i></button></li>');
 
 
     /*------------------
-    	Background Set
+        Search model
+    --------------------*/
+    $('.search-switch').on('click', function() {
+        $('.search-model').fadeIn(400);
+    });
+
+    $('.search-close-switch').on('click', function() {
+        $('.search-model').fadeOut(400, function() {
+            $('#search-input').val('');
+        });
+    });
+
+
+    /*------------------
+        Background Set
     --------------------*/
     $('.set-bg').each(function() {
         var bg = $(this).data('setbg');
@@ -47,13 +47,12 @@ $(window).on('load', function() {
 
 
     /*------------------
-    	Hero Slider
+        Hero Slider
     --------------------*/
     $('.hero-slider').owlCarousel({
         nav: false,
         dots: false,
         loop: true,
-        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         autoplay: true,
         items: 1,
         animateOut: 'fadeOut',
@@ -61,7 +60,7 @@ $(window).on('load', function() {
     });
 
     /*------------------
-    	Brands Slider
+        Brands Slider
     --------------------*/
     $('#client-carousel').owlCarousel({
         nav: false,
@@ -89,7 +88,7 @@ $(window).on('load', function() {
     });
 
     /*---------------------
-    	Testimonial Slider
+        Testimonial Slider
     ----------------------*/
     $('.testimonial-slider').owlCarousel({
         nav: false,
@@ -100,14 +99,14 @@ $(window).on('load', function() {
     });
 
     /*------------------
-    	Image Popup
+        Image Popup
     --------------------*/
     $('.video-popup').magnificPopup({
         type: 'iframe'
     });
 
     /*------------------
-    	Accordions
+        Accordions
     --------------------*/
     $('.panel-link').on('click', function(e) {
         $('.panel-link').parent('.panel-header').removeClass('active');
@@ -119,7 +118,7 @@ $(window).on('load', function() {
     });
 
     /*------------------
-    	Progress Bar
+        Progress Bar
     --------------------*/
     $('.progress-bar-style').each(function() {
         var progress = $(this).data("progress");
@@ -132,7 +131,7 @@ $(window).on('load', function() {
     });
 
     /*------------------
-    	Circle progress
+        Circle progress
     --------------------*/
     $('.circle-progress').each(function() {
         var cpvalue = $(this).data("cpvalue");
